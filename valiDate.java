@@ -56,7 +56,7 @@ class valiDate
             System.out.println ("If you wish to subtract the days, make your input negative!");
             n = Integer.parseInt (in.nextLine());
         }
-        
+
         
         
         System.out.println ("The new date is: " + dd + "/" + mm + "/" + yy);
