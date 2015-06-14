@@ -1,4 +1,4 @@
-﻿/*Question 2 - First term, 2014 - 15
+/*Question 2 - First term, 2014 - 15
 Write a program to accept a date in the string format dd/mm/yyyy. 
 Test the validity of the date and print the date in full form. 
 If the date is invalid then print a message as “Invalid date“ 
@@ -10,11 +10,11 @@ where N is to be input between 1 and 365.*/
 import java.util.*;
 class valiDate
 {
-    static Scanner in = new Scanner (System.in);
-    static boolean b = true;
-    static int dd, mm, yy;
-    static String sd;
-    public static void accept()
+    Scanner in = new Scanner (System.in);
+    boolean b = true;
+    int dd, mm, yy;
+    String sd;
+    public  void accept()
     {
 
         System.out.println ("Enter date: ");
@@ -42,7 +42,7 @@ class valiDate
         }
     }
 
-    public static void find()
+    public void find()
     {
         System.out.println ("Enter day of the week of the date: ");
         String day = in.nextLine();
@@ -56,23 +56,14 @@ class valiDate
             System.out.println ("If you wish to subtract the days, make your input negative!");
             n = Integer.parseInt (in.nextLine());
         }
-
-        Calendar cal = Calendar.getInstance();    
-        cal.set(Calendar.DAY_OF_MONTH, dd);
-        cal.set(Calendar.MONTH, mm);
-        cal.set(Calendar.YEAR, yy);
-        cal.add(Calendar.DAY_OF_MONTH, n);
         
-        dd = cal.DAY_OF_MONTH;
-        mm = cal.MONTH;
-        yy = cal.YEAR;
-        int id = cal.get(Calendar.DAY_OF_WEEK);
+        
         
         System.out.println ("The new date is: " + dd + "/" + mm + "/" + yy);
         System.out.println ("Day of the new date: " + week[id]);
     }
-    
-    public static void kill()
+
+    public void kill()
     {
         System.out.println ("Program terminated. ");
     }
